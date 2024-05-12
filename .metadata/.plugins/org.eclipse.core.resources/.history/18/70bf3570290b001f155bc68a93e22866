@@ -1,0 +1,24 @@
+package com.example.demo.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "evento")
+public class Comentario {
+
+}
+
+
+
+CREATE TABLE COMENTARIOS (
+	    codComentario INT PRIMARY KEY AUTO_INCREMENT,
+	    codUsuario INT,
+	    codEvento INT,
+	    mensaje VARCHAR(255),
+	    Fecha DATE,
+	    valoracion INT,
+	    estado TINYINT NOT NULL,
+	    FOREIGN KEY (codUsuario) REFERENCES USUARIO(codUsuario),
+	    FOREIGN KEY (codEvento) REFERENCES EVENTO(codEvento)
+	);

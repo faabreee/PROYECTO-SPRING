@@ -11,5 +11,8 @@ public interface EventoRepository extends JpaRepository<Evento, Integer>{
 
     @Query("SELECT e FROM Evento e WHERE e.usuario.codUsuario = ?1")
     List<Evento> findByUsuarioCodUsuario(Integer codUsuario);
+    
+    @Query("SELECT e FROM Evento e WHERE e.estado = 1")
+    List<Evento> findEventos(Integer estado);
 
 }

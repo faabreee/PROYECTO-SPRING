@@ -1,0 +1,35 @@
+package com.example.demo.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "entrada")
+public class Entrada {
+	public int codEntrada;
+	public int codUsuario;
+	public int codEvento;
+	public double precio;
+	public Date fecha;
+	public int hora;
+	public int estado;
+	
+	
+}
+
+
+
+
+CREATE TABLE ENTRADAS (
+	    codEntrada INT PRIMARY KEY AUTO_INCREMENT,
+	    codUsuario INT,
+	    codEvento INT,
+	    precio DECIMAL(10, 2),
+	    fecha DATE,
+	    hora TIME,
+	    estado TINYINT NOT NULL,
+	    FOREIGN KEY (codUsuario) REFERENCES USUARIO(codUsuario),
+	    FOREIGN KEY (codEvento) REFERENCES EVENTO(codEvento)
+	);

@@ -1,0 +1,41 @@
+package com.example.demo.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "comentarios")
+public class Comentario {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "codComentario")
+	private int codComentario;
+	
+    @Column(name = "codComentario")
+	private int codUsuario;
+    
+    @Column(name = "codComentario")
+	private int codEvento;
+    
+    @Column(name = "codComentario")
+	private String mensaje;
+    
+    @Column(name = "codComentario")
+	private Date fecha;
+    
+    @Column(name = "codComentario")
+	private int valoracion;
+    
+    @Column(name = "codComentario")
+	private int estado;
+
+}
+
+

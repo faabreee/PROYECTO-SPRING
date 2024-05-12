@@ -1,0 +1,22 @@
+package com.example.demo.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "comentarios")
+public class Comentario {
+
+	private int codComentario;
+	private int codUsuario;
+	private int codEvento;
+	private String mensaje;
+	private Date fecha;
+	private int valoracion;
+	private int estado;
+
+}
+
+

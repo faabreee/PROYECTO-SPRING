@@ -1,0 +1,24 @@
+package com.example.demo.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "entrada")
+public class Entrada {
+	public int codEntrada;
+	public int codUsuario;
+	public int codEvento;
+	public double precio;
+	public Date fecha;
+	public String hora;
+	public Integer estado;
+	
+	
+}
+
+
+
+
